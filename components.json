@@ -1,0 +1,5 @@
+{
+  "loading": "./packages/loading/index.js",
+  "wwy": "./packages/wwy/index.js",
+  "d5c-button": "./packages/d5c-button/index.js"
+}
