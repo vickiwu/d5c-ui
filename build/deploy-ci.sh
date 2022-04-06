@@ -2,16 +2,16 @@
 ###
  # @Author: vickiWu
  # @Date: 2022-02-18 10:04:00
- # @LastEditTime: 2022-04-02 17:27:44
+ # @LastEditTime: 2022-04-06 14:09:43
  # @LastEditors: vickiWu
  # @Description: 构建发行版本和开发版本内容
- # @FilePath: \element\build\deploy-ci.sh
+ # @FilePath: \d5c-ui\build\deploy-ci.sh
 ### 
 #! /bin/sh
 # 定义user.name和user.email
 mkdir temp_web
-git config --global user.name "element-bot"
-git config --global user.email "wallement@gmail.com"
+git config --global user.name "vickiwu"
+git config --global user.email "794431483@qq.com"
 
 if [ "$ROT_TOKEN" = "" ]; then
   echo "Bye~"
