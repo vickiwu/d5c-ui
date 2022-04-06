@@ -1,5 +1,97 @@
 {
-  "navMenu": [
+  "d5Comp": [
+    {
+      "name": "起步",
+      "children": [
+        {
+          "path": "/installation",
+          "name": "安装"
+        },
+        {
+          "path": "/quickstart",
+          "name": "快速上手"
+        }
+      ]
+    },
+    {
+      "name": "组件",
+      "groups": [
+        {
+          "groupName": "Notice",
+          "list": [
+            {
+              "path": "/alert",
+              "title": "Alert 警告"
+            }
+          ]
+        },
+        {
+          "groupName": "Others",
+          "list": [
+            {
+              "path": "/loading",
+              "title": "Loading 加载"
+            },
+            {
+              "path": "/wwy",
+              "title": "Wwy 吴文玉"
+            },
+            {
+              "path": "/d5c-button",
+              "title": "D5cButton 按钮"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "map": [
+    {
+      "name": "起步",
+      "children": [
+        {
+          "path": "/installation",
+          "name": "安装"
+        },
+        {
+          "path": "/quickstart",
+          "name": "快速上手"
+        }
+      ]
+    },
+    {
+      "name": "组件",
+      "groups": [
+        {
+          "groupName": "Notice",
+          "list": [
+            {
+              "path": "/alert",
+              "title": "Alert 警告"
+            }
+          ]
+        },
+        {
+          "groupName": "Others",
+          "list": [
+            {
+              "path": "/loading",
+              "title": "Loading 加载"
+            },
+            {
+              "path": "/wwy",
+              "title": "Wwy 吴文玉"
+            },
+            {
+              "path": "/d5c-button",
+              "title": "D5cButton 按钮"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sdk": [
     {
       "name": "起步",
       "children": [

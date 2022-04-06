@@ -87,7 +87,7 @@ export default {
 
   methods: {
     setNav() {
-      let nav = navConfig['navMenu'];
+      let nav = navConfig['d5Comp'];
       this.nav = [].concat(nav[0].children);
 
       nav[1].groups

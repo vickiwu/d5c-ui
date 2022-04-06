@@ -1,28 +1,22 @@
 <!--
  * @Author: vickiWu
  * @Date: 2022-03-23 18:35:48
- * @LastEditTime: 2022-04-02 10:05:32
+ * @LastEditTime: 2022-04-06 09:04:29
  * @LastEditors: vickiWu
  * @Description: 
- * @FilePath: \element\examples\components\HelloWorld.vue
+ * @FilePath: \d5c-ui\examples\components\HelloWorld.vue
 -->
 <template>
-  <div id="app">
-    <JSX></JSX>
+  <div>
+    <h4>地图</h4>
   </div>
 </template>
 
 <script>
-import JSX from './JSX.vue';
 export default {
-  name: 'HelloWord',
-  components: { JSX }
+  name: 'Map'
 };
 </script>
 
 <style scoped>
-#app {
-  text-align: center;
-  color: #2c3e50;
-}
 </style>

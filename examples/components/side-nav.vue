@@ -209,6 +209,7 @@ export default {
       bus.$emit('navFade', val);
     }
   },
+
   computed: {
     navStyle() {
       const style = {};
@@ -261,7 +262,9 @@ export default {
       if (
         !target.nextElementSibling ||
         target.nextElementSibling.tagName !== 'UL'
-      ) {return;}
+      ) {
+        return;
+      }
       this.hideAllMenu();
       event.currentTarget.nextElementSibling.style.height = 'auto';
     }
@@ -274,6 +277,11 @@ export default {
   mounted() {
     this.handleResize();
     window.addEventListener('resize', this.handleResize);
+    console.log(
+      '%c 🥜 this.base: ',
+      'font-size:20px;background-color: #FCA650;color:#fff;',
+      this.base
+    );
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.handleResize);

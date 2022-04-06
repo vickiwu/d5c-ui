@@ -1,3 +1,11 @@
+<!--
+ * @Author: vickiWu
+ * @Date: 2022-04-06 10:07:03
+ * @LastEditTime: 2022-04-06 10:20:10
+ * @LastEditors: vickiWu
+ * @Description: 
+ * @FilePath: \d5c-ui\examples\pages\d5Comp\component.vue
+-->
 <style lang="scss">
 .page-component__scroll {
   height: 100%;
@@ -136,7 +144,7 @@
   <el-scrollbar class="page-component__scroll" ref="componentScrollBar">
     <div class="page-container page-component">
       <el-scrollbar class="page-component__nav">
-        <side-nav :data="navsData['navMenu']" :base="`/component`"></side-nav>
+        <side-nav :data="navsData['d5Comp']" :base="`/d5Comp`"></side-nav>
       </el-scrollbar>
       <div class="page-component__content">
         <router-view class="content"></router-view>
@@ -152,8 +160,8 @@
   </el-scrollbar>
 </template>
 <script>
-import bus from '../bus';
-import navsData from '../nav.config.json';
+import bus from '../../bus';
+import navsData from '../../nav.config.json';
 import throttle from 'throttle-debounce/throttle';
 
 export default {

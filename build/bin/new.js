@@ -147,7 +147,7 @@ const navConfigFile = require('../../examples/nav.config.json');
 
 Object.keys(navConfigFile).forEach(lang => {
   // 获取组件分组导航信息，详见组件 菜单下左侧的二级导航
-  let groups = navConfigFile['navMenu'][1].groups;
+  let groups = navConfigFile['d5Comp'][1].groups;
   // 向导航信息添加新组件信息
   groups[groups.length - 1].list.push({
     path: `/${componentname}`,

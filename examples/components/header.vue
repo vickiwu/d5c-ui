@@ -303,17 +303,15 @@
         </h1>
         <ul class="nav">
           <li class="nav-item">
-            <router-link active-class="active" :to="`/component`"
+            <router-link active-class="active" :to="`/d5Comp`"
               >组件
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link active-class="active" :to="`/hello`"
-              >地图
-            </router-link>
+            <router-link active-class="active" :to="`/map`">地图 </router-link>
           </li>
           <li class="nav-item">
-            <router-link active-class="active" :to="`/jsx`"
+            <router-link active-class="active" :to="`/sdk`"
               >socket-sdk
             </router-link>
           </li>
