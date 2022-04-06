@@ -1,7 +1,7 @@
 /**
  * @Author: vickiWu
  * @Date: 2022-03-23 18:34:16
- * @LastEditTime: 2022-04-06 10:26:16
+ * @LastEditTime: 2022-04-06 11:18:13
  * @LastEditors: vickiWu
  * @Description:
  * @FilePath: \d5c-ui\examples\router.js
@@ -103,7 +103,13 @@ const registerRoute = (navConfig) => {
 };
 let route = registerRoute(navConfig);
 
-const routes = [];
+const routes = [
+  {
+    path: '/', // 首页
+    name: 'home-index',
+    component: (resolve) => require(['./pages/index.vue'], resolve) // 使用vue的异步组件技术 , 可以实现按需加载 .
+  }
+];
 
 export default new VueRouter({
   mode: 'hash',

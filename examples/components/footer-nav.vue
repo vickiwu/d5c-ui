@@ -76,7 +76,11 @@ export default {
     };
   },
 
-  computed: {},
+  computed: {
+    routeType() {
+      return this.$route.meta.routeType;
+    }
+  },
 
   watch: {
     '$route.path'() {
@@ -87,7 +91,7 @@ export default {
 
   methods: {
     setNav() {
-      let nav = navConfig['d5Comp'];
+      let nav = navConfig[this.routeType];
       this.nav = [].concat(nav[0].children);
 
       nav[1].groups
@@ -111,7 +115,7 @@ export default {
 
     handleNavClick(direction) {
       this.$router.push(
-        `/component${
+        `/${this.routeType}${
           direction === 'prev' ? this.leftNav.path : this.rightNav.path
         }`
       );
@@ -121,6 +125,7 @@ export default {
   created() {
     this.setNav();
     this.updateNav();
-  }
+  },
+  mounted() {}
 };
 </script>

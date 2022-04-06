@@ -1,7 +1,7 @@
 <!--
  * @Author: vickiWu
  * @Date: 2022-04-06 10:09:43
- * @LastEditTime: 2022-04-06 10:20:22
+ * @LastEditTime: 2022-04-06 11:04:59
  * @LastEditors: vickiWu
  * @Description: 
  * @FilePath: \d5c-ui\examples\pages\sdk\component.vue
@@ -144,7 +144,7 @@
   <el-scrollbar class="page-component__scroll" ref="componentScrollBar">
     <div class="page-container page-component">
       <el-scrollbar class="page-component__nav">
-        <side-nav :data="navsData['d5Comp']" :base="`/sdk`"></side-nav>
+        <side-nav :data="navsData['sdk']" :base="`/sdk`"></side-nav>
       </el-scrollbar>
       <div class="page-component__content">
         <router-view class="content"></router-view>

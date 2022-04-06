@@ -1,6 +1,7 @@
 <style scoped lang="scss">
 .banner {
   text-align: center;
+  margin-bottom: 20px;
 }
 .banner-desc {
   padding-top: 50px;
@@ -66,7 +67,7 @@
   }
 
   li {
-    width: 25%;
+    width: 33%;
     padding: 0 19px;
     box-sizing: border-box;
     float: left;
@@ -79,7 +80,7 @@
   }
 }
 .card {
-  height: 430px;
+  height: 450px;
   width: 100%;
   background: #ffffff;
   border: 1px solid #eaeefb;
@@ -268,45 +269,59 @@
     <div class="banner">
       <div class="banner-desc">
         <h1>二开组件库</h1>
-        <p>d5c-code，五城业务组件库,便于快速开发</p>
+        <p>
+          d5c-code，五城业务组件，地图sdk，webIM
+          sdk文档说明，demo展示,便于快速开发
+        </p>
       </div>
     </div>
 
     <div class="cards">
       <ul class="container">
-        <li>
+        <!-- <li>
           <div class="card">
             <img src="~examples/assets/images/guide.png" alt="" />
-            <h3>指南</h3>
-            <p>
-              了解设计指南，帮助产品设计人员搭建逻辑清晰、结构合理且高效易用的产品。
-            </p>
+            <h3>说明</h3>
+            <p>业务组件，地图sdk，webIM sdk文档说明，demo展示</p>
+            <router-link active-class="active" to="/design" exact>
+              查看详情
+            </router-link>
           </div>
-        </li>
+        </li> -->
         <li>
           <div class="card">
             <img src="~examples/assets/images/component.png" alt="" />
             <h3>组件</h3>
             <p>
-              使用组件 Demo
-              快速体验交互细节；使用前端框架封装的代码帮助工程师快速开发。
+              跃云，星耀，旭阳等业务系统开发过程中的，业务组件，基础组件二次封装等
             </p>
+            <router-link active-class="active" to="/d5Comp" exact>
+              查看详情
+            </router-link>
           </div>
         </li>
         <li>
           <div class="card">
             <img src="~examples/assets/images/theme-index-icon.svg" alt="" />
-            <h3>主题</h3>
-            <p>在线主题编辑器，可视化定制和管理站点主题、组件样式</p>
+            <h3>地图</h3>
+            <p>
+              运输线路地图相关。包含规划线路，线路轨迹，轨迹回放，车辆实时位置展示等
+            </p>
+            <router-link active-class="active" to="/map" exact>
+              查看详情
+            </router-link>
           </div>
         </li>
         <li>
           <div class="card">
             <img src="~examples/assets/images/resource.png" alt="" />
-            <h3>资源</h3>
+            <h3>IM-sdk</h3>
             <p>
-              下载相关资源，用其快速搭建页面原型或高保真视觉稿，提升产品设计效率。
+              webIM,消息中台相关；包含单聊，发送表情，本地缓存数据，发送文件等内容。
             </p>
+            <router-link active-class="active" to="/sdk" exact
+              >查看详情
+            </router-link>
           </div>
         </li>
       </ul>

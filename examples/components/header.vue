@@ -124,31 +124,6 @@
       cursor: default;
     }
 
-    &.lang-item,
-    &:last-child {
-      cursor: default;
-      margin-left: 34px;
-
-      span {
-        opacity: 0.8;
-      }
-
-      .nav-lang {
-        cursor: pointer;
-        display: inline-block;
-        height: 100%;
-        color: #888;
-
-        &:hover {
-          color: #409eff;
-        }
-        &.active {
-          font-weight: bold;
-          color: #409eff;
-        }
-      }
-    }
-
     a {
       text-decoration: none;
       color: #1989fa;
@@ -235,11 +210,6 @@
     .nav-item {
       margin-left: 6px;
 
-      &.lang-item,
-      &:last-child {
-        margin-left: 10px;
-      }
-
       a {
         padding: 0 5px;
       }
@@ -260,19 +230,6 @@
       a {
         font-size: 12px;
         vertical-align: top;
-      }
-
-      &.lang-item {
-        height: 100%;
-
-        .nav-lang {
-          display: flex;
-          align-items: center;
-
-          span {
-            padding-bottom: 0;
-          }
-        }
       }
     }
     .nav-dropdown {
@@ -303,16 +260,16 @@
         </h1>
         <ul class="nav">
           <li class="nav-item">
-            <router-link active-class="active" :to="`/d5Comp`"
-              >组件
+            <router-link active-class="active" :to="`/d5Comp`">
+              组件
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link active-class="active" :to="`/map`">地图 </router-link>
+            <router-link active-class="active" :to="`/map`"> 地图 </router-link>
           </li>
           <li class="nav-item">
-            <router-link active-class="active" :to="`/sdk`"
-              >socket-sdk
+            <router-link active-class="active" :to="`/sdk`">
+              IM-sdk
             </router-link>
           </li>
         </ul>
