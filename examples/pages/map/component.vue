@@ -1,7 +1,7 @@
 <!--
  * @Author: vickiWu
  * @Date: 2022-04-06 10:09:26
- * @LastEditTime: 2022-04-06 11:04:54
+ * @LastEditTime: 2022-04-07 09:04:30
  * @LastEditors: vickiWu
  * @Description: 
  * @FilePath: \d5c-ui\examples\pages\map\component.vue
@@ -55,7 +55,7 @@
 
   .page-component__content {
     padding-left: 270px;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
     box-sizing: border-box;
     padding-right: 200px;
   }

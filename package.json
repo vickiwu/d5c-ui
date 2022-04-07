@@ -29,7 +29,7 @@
     "type": "git",
     "url": "git@github.com:ElemeFE/element.git"
   },
-  "homepage": "http://vickiwu.github.io",
+  "homepage": "https://vickiwu.github.io/d5c-ui",
   "keywords": [
     "eleme",
     "vue",
@@ -44,6 +44,7 @@
   "dependencies": {
     "async-validator": "~1.8.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.0",
+    "d5c-im-ts": "^1.0.36",
     "deepmerge": "^1.2.0",
     "normalize-wheel": "^1.0.1",
     "resize-observer-polyfill": "^1.5.0",

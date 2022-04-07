@@ -2735,6 +2735,11 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
+d5c-im-ts@^1.0.36:
+  version "1.0.36"
+  resolved "https://registry.yarnpkg.com/d5c-im-ts/-/d5c-im-ts-1.0.36.tgz#e37e20713bfe0f2b8a784609003e2a5d7d06e1ab"
+  integrity sha512-YpdnOt5yis3m7JyDDTmB/Lv0cVrLDbEnCaUFHdIQFagjaAagP1VgUTT7L1Fxr0suujy/n2BUupy3zZnVbggG9g==
+
 d@1, d@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/d/-/d-1.0.1.tgz#8698095372d58dbee346ffd0c7093f99f8f9eb5a"

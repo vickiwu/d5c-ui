@@ -1,11 +1,3 @@
-<!--
- * @Author: vickiWu
- * @Date: 2022-04-06 10:09:43
- * @LastEditTime: 2022-04-06 11:04:59
- * @LastEditors: vickiWu
- * @Description: 
- * @FilePath: \d5c-ui\examples\pages\sdk\component.vue
--->
 <style lang="scss">
 .page-component__scroll {
   height: 100%;
@@ -55,7 +47,7 @@
 
   .page-component__content {
     padding-left: 270px;
-    padding-bottom: 100px;
+    padding-bottom: 90px;
     box-sizing: border-box;
     padding-right: 200px;
   }
