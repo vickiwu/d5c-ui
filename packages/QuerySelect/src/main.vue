@@ -1,130 +1,132 @@
 <template>
-  <div
-    v-clickoutside="handleClose"
-    class="query-select"
-    @click.stop="toggleMenu"
-  >
-    <template v-if="multiple">
-      <div
-        class="qs-tags"
-        :style="{ 'max-width': inputWidth - 32 + 'px', width: '100%' }"
-      >
-        <div>
-          <el-tag
-            v-for="item in selectedRows"
-            :key="item[valueKey]"
-            disable-transitions
-            type="info"
-            :closable="!disabled"
-            size="mini"
-            @close="onDeleteTag($event, item)"
-          >
-            <span>{{ item[valueLabel] }}</span>
-          </el-tag>
-        </div>
-      </div>
-    </template>
-    <el-input
-      ref="reference"
-      v-model="selectedLabel"
-      :placeholder="placeholderLabel"
-      :clearable="clearable"
-      readonly
-      :disabled="disabled"
-      autocomplete="off"
-      @focus="handleFocus"
-      @blur="handleBlur"
-      @mouseenter.native="inputHovering = true"
-      @mouseleave.native="inputHovering = false"
+  <div class="d5-querySelect">
+    <div
+      v-clickoutside="handleClose"
+      class="query-select"
+      @click.stop="toggleMenu"
     >
-      <template slot="suffix">
-        <i
-          v-show="!showClose"
-          :class="['el-input__icon', 'el-icon-' + iconClass]"
-        ></i>
-        <i
-          v-if="showClose"
-          class="el-input__icon el-icon-circle-close"
-          @click="handleClearClick"
-        ></i>
-      </template>
-    </el-input>
-    <transition name="el-zoom-in-top" @after-leave="doDestroy">
-      <dropdown v-show="visible" ref="popper">
-        <!-- 下拉详情 -->
-        <div ref="qsContent" class="qs-content" :style="{ width: width }">
-          <div v-if="showQuery" class="qs-query">
-            <el-form
-              ref="searchForm"
-              class="query-form"
+      <template v-if="multiple">
+        <div
+          class="qs-tags"
+          :style="{ 'max-width': inputWidth - 32 + 'px', width: '100%' }"
+        >
+          <div>
+            <el-tag
+              v-for="item in selectedRows"
+              :key="item[valueKey]"
+              disable-transitions
+              type="info"
+              :closable="!disabled"
               size="mini"
-              :label-width="labelWidth"
-              @submit.native.prevent
-              :model="searchForm"
+              @close="onDeleteTag($event, item)"
             >
-              <template>
-                <el-form-item
-                  v-for="field in searchFields"
-                  :key="field._id + '_fi_' + field.field"
-                  :label="field.label"
-                  :prop="field.field"
+              <span>{{ item[valueLabel] }}</span>
+            </el-tag>
+          </div>
+        </div>
+      </template>
+      <el-input
+        ref="reference"
+        v-model="selectedLabel"
+        :placeholder="placeholderLabel"
+        :clearable="clearable"
+        readonly
+        :disabled="disabled"
+        autocomplete="off"
+        @focus="handleFocus"
+        @blur="handleBlur"
+        @mouseenter.native="inputHovering = true"
+        @mouseleave.native="inputHovering = false"
+      >
+        <template slot="suffix">
+          <i
+            v-show="!showClose"
+            :class="['el-input__icon', 'el-icon-' + iconClass]"
+          ></i>
+          <i
+            v-if="showClose"
+            class="el-input__icon el-icon-circle-close"
+            @click="handleClearClick"
+          ></i>
+        </template>
+      </el-input>
+      <transition name="el-zoom-in-top" @after-leave="doDestroy">
+        <dropdown v-show="visible" ref="popper">
+          <!-- 下拉详情 -->
+          <div ref="qsContent" class="qs-content" :style="{ width: width }">
+            <div v-if="showQuery" class="qs-query">
+              <el-form
+                ref="searchForm"
+                class="query-form"
+                size="mini"
+                :label-width="labelWidth"
+                @submit.native.prevent
+                :model="searchForm"
+              >
+                <template>
+                  <el-form-item
+                    v-for="field in searchFields"
+                    :key="field._id + '_fi_' + field.field"
+                    :label="field.label"
+                    :prop="field.field"
+                  >
+                    <input
+                      type="text"
+                      class="qs-search-input"
+                      :value="searchForm[field.field]"
+                      :placeholder="`请输入${field.label}`"
+                      @input="onFieldInput($event, field.field)"
+                    />
+                  </el-form-item>
+                </template>
+              </el-form>
+              <div class="query-footer">
+                <el-button
+                  type="text"
+                  style="color: #272727; font-size: 14px"
+                  size="mini"
+                  @click="onReset"
+                  >重置</el-button
                 >
-                  <input
-                    type="text"
-                    class="qs-search-input"
-                    :value="searchForm[field.field]"
-                    :placeholder="`请输入${field.label}`"
-                    @input="onFieldInput($event, field.field)"
-                  />
-                </el-form-item>
-              </template>
-            </el-form>
-            <div class="query-footer">
-              <el-button
-                type="text"
-                style="color: #272727; font-size: 14px"
-                size="mini"
-                @click="onReset"
-                >重置</el-button
+                <el-button
+                  type="text"
+                  style="font-size: 15px; margin-top: -1px"
+                  size="mini"
+                  @click="onSearch"
+                  >搜索</el-button
+                >
+                <slot name="line"></slot>
+                <slot name="btn"></slot>
+              </div>
+            </div>
+            <div class="qs-table" :style="{ width: tableWidth + 'px' }">
+              <el-table
+                ref="dataTable"
+                v-loading="loading"
+                :data="tableData"
+                :highlight-current-row="!multiple"
+                max-height="300px"
+                :row-class-name="setRowClass"
+                @row-click="onSelect"
               >
-              <el-button
-                type="text"
-                style="font-size: 15px; margin-top: -1px"
-                size="mini"
-                @click="onSearch"
-                >搜索</el-button
+                <slot></slot>
+              </el-table>
+              <el-pagination
+                :current-page.sync="pageNo"
+                :page-size.sync="pageSize"
+                :total="total"
+                layout="prev, pager, next"
+                style="padding: 10px 0 10px"
+                background
+                small
+                @current-change="currentChange"
               >
-              <slot name="line"></slot>
-              <slot name="btn"></slot>
+              </el-pagination>
             </div>
           </div>
-          <div class="qs-table" :style="{ width: tableWidth + 'px' }">
-            <el-table
-              ref="dataTable"
-              v-loading="loading"
-              :data="tableData"
-              :highlight-current-row="!multiple"
-              max-height="300px"
-              :row-class-name="setRowClass"
-              @row-click="onSelect"
-            >
-              <slot></slot>
-            </el-table>
-            <el-pagination
-              :current-page.sync="pageNo"
-              :page-size.sync="pageSize"
-              :total="total"
-              layout="prev, pager, next"
-              style="padding: 10px 0 10px"
-              background
-              small
-              @current-change="currentChange"
-            >
-            </el-pagination>
-          </div>
-        </div>
-      </dropdown>
-    </transition>
+        </dropdown>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -137,7 +139,7 @@ import {
   removeResizeListener
 } from 'element-ui/src/utils/resize-event';
 export default {
-  name: 'QuerySelect',
+  name: 'D5cQuerySelect',
   components: { Dropdown },
   directives: { Clickoutside },
   mixins: [Emitter],
@@ -292,14 +294,15 @@ export default {
     this.setDefaultLabel();
   },
   beforeDestroy() {
-    if (this.$el && this.handleResize)
+    if (this.$el && this.handleResize) {
       removeResizeListener(this.$el, this.handleResize);
+    }
   },
   methods: {
     setDefaultLabel() {
       if (this.multiple) {
         this.selectedRows =
-          this.values?.map((val, index) => {
+          this.values.map((val, index) => {
             return {
               [this.valueKey]: val,
               [this.valueLabel]: this.defaultLabel[index]
@@ -451,7 +454,7 @@ export default {
       }
     },
     setSelected(row) {
-      this.$refs.dataTable?.setCurrentRow(row);
+      this.$refs.dataTable.setCurrentRow(row);
       if (Array.isArray(this.valueLabel)) {
         this.selectedLabel = this.valueLabel
           .map(key => {
@@ -494,133 +497,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.query-select {
-  position: relative;
-  width: 100%;
-  cursor: pointer;
-}
-.is-reverse {
-  transform: rotate(180deg);
-}
-::v-deep {
-  .el-input__inner {
-    cursor: pointer;
-  }
-  .el-form-item--mini.el-form-item {
-    margin-bottom: 0;
-  }
-  .el-pagination {
-    margin-top: 5px;
-  }
-  .el-table__header {
-    font-size: 14px;
-  }
-  .el-table__row {
-    font-size: 14px;
-    cursor: pointer;
-  }
-  .el-table__body tr.current-row > td {
-    background: transparent;
-    color: #4385ff;
-  }
-  .el-table__body tr.multi-selected-row > td {
-    color: #4385ff;
-  }
-}
-.qs-content {
-  display: flex;
-  flex-direction: column;
-}
-.qs-table {
-  padding-bottom: 5px;
-  width: 100%;
-  position: relative;
-}
-.qs-query {
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  .query-form {
-    flex-grow: 1;
-    ::v-deep {
-      .el-input__inner {
-        cursor: auto;
-      }
-      .el-form-item__label {
-        font-size: 14px;
-        color: #272727;
-        margin-top: 1.5px;
-      }
-    }
-    padding-right: 10px;
-    border-right: 1px solid #ddd;
-  }
-  .query-footer {
-    flex-grow: 0;
-    flex-shrink: 0;
-    padding: 5px 10px;
-    display: flex;
-    justify-content: space-around;
-    .el-button {
-      margin: 0 5px;
-    }
-  }
-}
-.qs-tags {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  z-index: 1;
-  overflow-x: auto;
-  &::v-deep {
-    .el-tag {
-      margin: 2px 0 2px 6px;
-    }
-    .el-tag.el-tag--info .el-tag__close {
-      // background-color: #5a6073;
-      color: #5a6073;
-    }
-    .el-tag.el-tag--info .el-tag__close:hover {
-      background-color: #909399;
-      color: white;
-    }
-  }
-}
-.qs-search-input {
-  -webkit-appearance: none;
-  background-color: #fff;
-  background-image: none;
-  border-radius: 2px;
-  border: 1px solid #dcdfe6;
-  box-sizing: border-box;
-  color: #606266;
-  display: inline-block;
-  font-size: inherit;
-  height: 28px;
-  line-height: 28px;
-  outline: none;
-  padding: 0 10px;
-  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-  width: 100%;
-  margin: 1px 0;
-  &:hover {
-    border-color: #c0c4cc;
-  }
-  &:focus {
-    outline: none;
-    border-color: #409eff;
-  }
-  &::placeholder {
-    color: #c0c4cc;
-  }
-}
-</style>
-
-<style lang="scss">
-.el-tooltip__popper {
-  z-index: 9999 !important;
-}
-</style>

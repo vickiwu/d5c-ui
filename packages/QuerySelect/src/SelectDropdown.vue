@@ -1,7 +1,7 @@
 <!--
  * @Author: vickiWu
  * @Date: 2022-04-07 15:40:45
- * @LastEditTime: 2022-04-07 15:41:49
+ * @LastEditTime: 2022-04-07 16:32:35
  * @LastEditors: vickiWu
  * @Description: 
  * @FilePath: \d5c-ui\packages\QuerySelect\src\SelectDropdown.vue
@@ -82,8 +82,3 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-.el-popper {
-  z-index: 10000;
-}
-</style>

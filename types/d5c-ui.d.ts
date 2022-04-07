@@ -1,6 +1,8 @@
 import Vue  from 'vue'
 import { ElLoading } from './loading'
-import { ElWwy } from './wwy'import { ElD5cButton } from './d5c-button'
+import { ElWwy } from './wwy'
+import { ElD5cButton } from './d5c-button'
+import { D5cQuerySelect } from './querySelect'
 
 export interface InstallationOptions {
   locale: any,
@@ -26,3 +28,6 @@ export class Wwy extends ElWwy {}
 
 /** D5cButton Component */
 export class D5cButton extends ElD5cButton {}
+
+/** QuerySelect Component */
+export class QuerySelect extends D5cQuerySelect {}

@@ -46,19 +46,19 @@ export default ${ComponentName};`
   {
     filename: 'src/main.vue',
     content: `<template>
-  <div class="el-${componentname}"></div>
+  <div class="d5-${componentname}"></div>
 </template>
 
 <script>
 export default {
-  name: 'El${ComponentName}'
+  name: 'D5c${ComponentName}'
 };
 </script>`
   },
   // 创建多语言组件文档 /examples/docs/{lang}/button.md
   // 如果添加了新语言，需要再这边进行新配置
   {
-    filename: path.join('../../examples/docs', `${componentname}.md`),
+    filename: path.join('../../examples/docs/d5Comp', `${componentname}.md`),
     content: `## ${ComponentName} ${chineseName}`
   },
   // 创建单元测试文件 /test/unit/specs/button.spec.js
@@ -96,7 +96,7 @@ describe('${ComponentName}', () => {
 
 /** ${ComponentName} Component */
 
-export declare class El${ComponentName} extends ElementUIComponent {
+export declare class D5c${ComponentName} extends ElementUIComponent {
 }`
   }
 ];
@@ -124,10 +124,10 @@ const elementTsPath = path.join(__dirname, '../../types/d5c-ui.d.ts');
 
 let elementTsText = `${fs.readFileSync(elementTsPath)}
 /** ${ComponentName} Component */
-export class ${ComponentName} extends El${ComponentName} {}`;
+export class ${ComponentName} extends D5c${ComponentName} {}`;
 
 const index = elementTsText.indexOf('export') - 1;
-const importString = `import { El${ComponentName} } from './${componentname}'`;
+const importString = `import { D5c${ComponentName} } from './${componentname}'`;
 
 elementTsText = elementTsText.slice(0, index) + importString + '\n' + elementTsText.slice(index);
 
@@ -145,16 +145,21 @@ Files.forEach(file => {
 // 添加到 nav.config.json
 const navConfigFile = require('../../examples/nav.config.json');
 
-Object.keys(navConfigFile).forEach(lang => {
-  // 获取组件分组导航信息，详见组件 菜单下左侧的二级导航
-  let groups = navConfigFile['d5Comp'][1].groups;
-  // 向导航信息添加新组件信息
-  groups[groups.length - 1].list.push({
-    path: `/${componentname}`,
-    title: componentname !== chineseName
-      ? `${ComponentName} ${chineseName}`
-      : ComponentName
-  });
+Object.keys(navConfigFile).forEach(type => {
+  if (type === 'd5Comp') {
+    // 获取组件分组导航信息，详见组件 菜单下左侧的二级导航
+    let groups = navConfigFile['d5Comp'][1].groups;
+    // 向导航信息添加新组件信息
+    groups[groups.length - 1].list.push({
+      path: `/${componentname}`,
+      title: componentname !== chineseName
+        ? `${ComponentName} ${chineseName}`
+        : ComponentName
+    });
+  } else {
+    return false;
+  }
+
 });
 // 更新json文件
 fileSave(path.join(__dirname, '../../examples/nav.config.json'))

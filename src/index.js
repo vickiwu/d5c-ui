@@ -2,11 +2,13 @@
 import Loading from '../packages/loading/index.js';
 import Wwy from '../packages/wwy/index.js';
 import D5cButton from '../packages/d5c-button/index.js';
+import QuerySelect from '../packages/querySelect/index.js';
 import locale from 'element-ui/src/locale';
 const components = [
   Loading,
   Wwy,
-  D5cButton
+  D5cButton,
+  QuerySelect
 ];
 const install = function(Vue, opts = {}) {
   locale.use(opts.locale);
@@ -23,5 +25,6 @@ export default {
   install,
   Loading,
   Wwy,
-  D5cButton
+  D5cButton,
+  QuerySelect
 };

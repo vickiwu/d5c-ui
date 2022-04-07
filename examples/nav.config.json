@@ -275,6 +275,10 @@
             {
               "path": "/wwy",
               "title": "Wwy 吴文玉"
+            },
+            {
+              "path": "/querySelect",
+              "title": "QuerySelect 下拉表格查询"
             }
           ]
         }
