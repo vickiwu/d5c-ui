@@ -7,6 +7,8 @@
     <link rel='mask-icon' href="https://raw.githubusercontent.com/ElemeFE/element/dev/examples/assets/images/element-logo-small.svg" color="#409EFF">
     <link rel="stylesheet" href="//shadow.elemecdn.com/npm/highlight.js@9.3.0/styles/color-brewer.css">
     <title>d5c-code，五城业务组件库</title>
+     <script type="text/javascript"
+    src="https://webapi.amap.com/maps?v=1.4.15&key=48f7daf182243dd191552ae37421db30&plugin=AMap.Driving&plugin=AMap.PolylineEditor&plugin=AMap.Autocomplete"></script>
     <meta name="description" content="d5c-code，五城业务组件库" />
   </head>
   <body>

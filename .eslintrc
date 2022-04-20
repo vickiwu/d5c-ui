@@ -1,7 +1,10 @@
 {
   "globals": {
     "ga": true,
-    "chrome": true
+    "chrome": true,
+    "AMap": true,
+    "AMapUI": true,
+    "Loca": true
   },
   "plugins": [
     "html",

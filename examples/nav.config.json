@@ -291,7 +291,7 @@
       "children": [
         {
           "path": "/installation",
-          "name": "安装"
+          "name": "介绍"
         },
         {
           "path": "/quickstart",
@@ -303,11 +303,11 @@
       "name": "功能",
       "groups": [
         {
-          "groupName": "Notice",
+          "groupName": "基础功能",
           "list": [
             {
-              "path": "/alert",
-              "title": "Alert 警告"
+              "path": "/marker",
+              "title": "marker 标记点"
             }
           ]
         },

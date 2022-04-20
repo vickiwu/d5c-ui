@@ -1,7 +1,7 @@
 /**
  * @Author: vickiWu
  * @Date: 2022-03-23 14:25:44
- * @LastEditTime: 2022-04-07 15:02:46
+ * @LastEditTime: 2022-04-15 17:14:27
  * @LastEditors: vickiWu
  * @Description:
  * @FilePath: \d5c-ui\examples\entry.js
@@ -24,6 +24,7 @@ import './demo-styles/index.scss';
 import demoBlock from './components/demo-block';
 import SideNav from './components/side-nav';
 import FooterNav from './components/footer-nav';
+import MyMap from './components/Map/index.vue';
 
 Vue.config.productionTip = false;
 Vue.prototype.$d5cIm = d5cIm;
@@ -33,6 +34,7 @@ Vue.use(MeUI);
 Vue.component('demo-block', demoBlock);
 Vue.component('side-nav', SideNav);
 Vue.component('footer-nav', FooterNav);
+Vue.component('my-map', MyMap);
 
 router.afterEach(() => {
   // https://github.com/highlightjs/highlight.js/issues/909#issuecomment-131686186
