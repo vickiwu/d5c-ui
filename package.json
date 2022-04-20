@@ -1,5 +1,5 @@
 {
-  "name": "d5c-ui",
+  "name": "d5c-ui-el",
   "version": "2.15.20",
   "description": "A Component Library for Vue.js.",
   "main": "lib/d5c-ui.common.js",
