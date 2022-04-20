@@ -1,24 +1,18 @@
 <!--
  * @Author: vickiWu
  * @Date: 2022-04-02 09:45:34
- * @LastEditTime: 2022-04-02 17:28:03
+ * @LastEditTime: 2022-04-18 16:39:09
  * @LastEditors: vickiWu
  * @Description: 
- * @FilePath: \element\examples\docs\quickstart.md
+ * @FilePath: \d5c-ui\examples\docs\d5Comp\quickstart.md
 -->
 ## 快速上手
 
-本节将介绍如何在项目中使用 Element。
+本节将介绍如何在项目中使用 D5cUI,基于Element二次封装的五城业务组件库。
 
-### 使用 vue-cli@3
+### 使用 
 
-我们为新版的 vue-cli 准备了相应的 [Element 插件](https://github.com/ElementUI/vue-cli-plugin-element)，你可以用它们快速地搭建一个基于 Element 的项目。
-
-### 使用 Starter Kit
-
-我们提供了通用的[项目模板](https://github.com/ElementUI/element-starter)，你可以直接使用。对于 Laravel 用户，我们也准备了相应的[模板](https://github.com/ElementUI/element-in-laravel-starter)，同样可以直接下载使用。
-
-如果不希望使用我们提供的模板，请继续阅读。
+五城业务组件基于 Element 的项目。
 
 ### 引入 Element
 
@@ -269,7 +263,6 @@ Vue.prototype.$message = Message;
 ```js
 import Vue from 'vue';
 import Element from 'element-ui';
-Vue.use(Element, { size: 'small', zIndex: 3000 });
 ```
 
 按需引入 Element：
@@ -283,16 +276,4 @@ Vue.use(Button);
 ```
 
 按照以上设置，项目中所有拥有 `size` 属性的组件的默认尺寸均为 'small'，弹框的初始 z-index 为 3000。
-
-### 开始使用
-
-至此，一个基于 Vue 和 Element 的开发环境已经搭建完毕，现在就可以编写代码了。各个组件的使用方法请参阅它们各自的文档。
-
-### 使用 Nuxt.js
-
-我们还可以使用 [Nuxt.js](https://nuxtjs.org)：
-
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe src="https://glitch.com/embed/#!/embed/nuxt-with-element?path=nuxt.config.js&previewSize=0&attributionHidden=true" alt="nuxt-with-element on glitch" style="height: 100%; width: 100%; border: 0;"></iframe>
-</div>
 

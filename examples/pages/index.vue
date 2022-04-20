@@ -268,7 +268,7 @@
   <div>
     <div class="banner">
       <div class="banner-desc">
-        <h1>二开组件库</h1>
+        <h1>五城组件库</h1>
         <p>
           d5c-code，五城业务组件，地图sdk，webIM
           sdk文档说明，demo展示,便于快速开发
