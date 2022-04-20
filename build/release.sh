@@ -2,7 +2,7 @@
 ###
  # @Author: vickiWu
  # @Date: 2022-02-18 10:04:00
- # @LastEditTime: 2022-04-20 11:38:23
+ # @LastEditTime: 2022-04-20 11:41:04
  # @LastEditors: vickiWu
  # @Description: 代码分支合并push远程分支、版本号确认更新、组件主题发布(npm pulish)。
  # @FilePath: \d5c-ui\build\release.sh
@@ -52,7 +52,7 @@ then
   # git push wwy master
   # git push wwy refs/tags/v$VERSION
   git checkout dev
-  git rebase master
+  git rebase masters
   # git push wwy dev
  # 发布组件。
   if [[ $VERSION =~ "beta" ]]
