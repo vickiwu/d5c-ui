@@ -2,10 +2,10 @@
 ###
  # @Author: vickiWu
  # @Date: 2022-02-18 10:04:00
- # @LastEditTime: 2022-04-02 17:27:47
+ # @LastEditTime: 2022-04-20 10:39:10
  # @LastEditors: vickiWu
  # @Description: 代码分支合并push远程分支、版本号确认更新、组件主题发布(npm pulish)。
- # @FilePath: \element\build\release.sh
+ # @FilePath: \d5c-ui\build\release.sh
 ### 
 #运行shell脚本sh build/release.sh,合并dev分支到master分支、更新版本号、发布主题、push代码到远程仓库、发布组件库至NPM;
 # -e 当命令发生错误的时候，停止脚本执行
@@ -49,11 +49,11 @@ then
   npm version $VERSION --message "[release] $VERSION"
 
   # publish master 和 dev 分支push 到远程分支。
-  git push eleme master
-  git push eleme refs/tags/v$VERSION
+  git push  master
+  git push  refs/tags/v$VERSION
   git checkout dev
   git rebase master
-  git push eleme dev
+  git push  dev
  # 发布组件。
   if [[ $VERSION =~ "beta" ]]
   then
