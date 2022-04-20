@@ -36,9 +36,6 @@
     "components"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ElemeFE/element/issues"
-  },
   "unpkg": "lib/index.js",
   "style": "lib/d5c-style/index.css",
   "dependencies": {

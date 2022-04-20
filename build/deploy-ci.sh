@@ -2,7 +2,7 @@
 ###
  # @Author: vickiWu
  # @Date: 2022-02-18 10:04:00
- # @LastEditTime: 2022-04-06 14:09:43
+ # @LastEditTime: 2022-04-20 10:27:02
  # @LastEditors: vickiWu
  # @Description: 构建发行版本和开发版本内容
  # @FilePath: \d5c-ui\build\deploy-ci.sh
@@ -46,7 +46,7 @@ if [ "$TRAVIS_TAG" ]; then
   # build site 项目网站构建
   npm run deploy:build
   cd temp_web
-  git clone --depth 1 -b gh-pages --single-branch https://$ROT_TOKEN@github.com/ElemeFE/element.git && cd element
+  git clone --depth 1 -b gh-pages --single-branch https://$ROT_TOKEN@github.com/vickiwu/d5c-ui.git && cd element
   # build sub folder
   echo $TRAVIS_TAG
 
