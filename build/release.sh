@@ -49,11 +49,11 @@ then
   npm version $VERSION --message "[release] $VERSION"
 
   # publish master 和 dev 分支push 到远程分支。
-  git push wwy master
-  git push wwy refs/tags/v$VERSION
+  git push origin master
+  git push origin refs/tags/v$VERSION
   git checkout dev
   git rebase master
-  git push wwy dev
+  git push origin dev
  # 发布组件。
   if [[ $VERSION =~ "beta" ]]
   then
