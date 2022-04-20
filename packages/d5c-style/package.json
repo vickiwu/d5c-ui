@@ -1,6 +1,6 @@
 {
   "name": "element-d5c-style",
-  "version": "2.15.19",
+  "version": "2.15.20",
   "description": "Element component chalk theme.",
   "main": "lib/index.css",
   "style": "lib/index.css",
