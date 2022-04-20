@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 14:32:19
  * @LastEditors: vickiWu
  * @Description:
- * @FilePath: \element\build\md-loader\fence.js
+ * @FilePath: \d5c-ui\build\md-loader\fence.js
  */
 // 覆盖默认的 fence 渲染策略
 module.exports = (md) => {

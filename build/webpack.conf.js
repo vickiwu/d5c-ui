@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 13:40:17
  * @LastEditors: vickiWu
  * @Description:以 umd 规范打包构建类库,不仅可以 NodeJs 环境使用，也可以在浏览器环境（browser）使用，需要设置umdNamedDefine: true。
- * @FilePath: \element\build\webpack.conf.js
+ * @FilePath: \d5c-ui\build\webpack.conf.js
  */
 // 执行打包webpack --config build/webpack.conf.js,入口文件 src/index.js 以 umd 格式输出到 lib/index.js;
 const path = require('path');

@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-03-24 15:57:46
  * @LastEditors: vickiWu
  * @Description:
- * @FilePath: \element\build\bin\build-locale.js
+ * @FilePath: \d5c-ui\build\bin\build-locale.js
  */
 // 通过 babel 处理 src/locale/lang 目录下的文件，生成 umd 格式的文件，输出至 lib/umd/locale 目录下。
 var fs = require('fs');

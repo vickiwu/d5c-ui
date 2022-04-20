@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 17:08:10
  * @LastEditors: vickiWu
  * @Description: 
- * @FilePath: \element\examples\app.vue
+ * @FilePath: \d5c-ui\examples\app.vue
 -->
 <template>
   <div id="app">

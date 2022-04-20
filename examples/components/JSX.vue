@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 09:57:31
  * @LastEditors: vickiWu
  * @Description: 测试jxs语法    
- * @FilePath: \element\examples\components\JSX.vue
+ * @FilePath: \d5c-ui\examples\components\JSX.vue
 -->
 <script>
 export default {

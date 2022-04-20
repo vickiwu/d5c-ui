@@ -15,7 +15,7 @@ mkdir temp_web
 npm run deploy:build
 cd temp_web
 # 拷贝gh-pages 分支仓库到本地 进入该项目 
-git clone --depth 1 -b gh-pages --single-branch https://github.com/vickiwu/d5c-ui.git && cd element
+git clone --depth 1 -b gh-pages --single-branch https://github.com/vickiwu/d5c-ui.git && cd d5c-ui
 
 # build sub folder 创建子目录
 SUB_FOLDER='2.15'
@@ -23,11 +23,11 @@ mkdir -p $SUB_FOLDER
 # 清除文件
 rm -rf *.js *.css *.map static
 rm -rf $SUB_FOLDER/**
-# /examples/d5c-ui 目录下网站静态文件copy到 temp_web/element
+# /examples/d5c-ui 目录下网站静态文件copy到 temp_web/d5c-ui
 cp -rf ../../examples/d5c-ui/** .
 cp -rf ../../examples/d5c-ui/** $SUB_FOLDER/
 cd ../..
 
 # deploy domestic site 发布
-faas deploy daily -P element
+faas deploy daily -P d5c-ui
 rm -rf temp_web

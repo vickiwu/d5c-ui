@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 14:32:14
  * @LastEditors: vickiWu
  * @Description: 初始化markdown-it实例
- * @FilePath: \element\build\md-loader\config.js
+ * @FilePath: \d5c-ui\build\md-loader\config.js
  */
 const Config = require('markdown-it-chain');
 const anchorPlugin = require('markdown-it-anchor');

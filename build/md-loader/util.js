@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 14:32:25
  * @LastEditors: vickiWu
  * @Description:
- * @FilePath: \element\build\md-loader\util.js
+ * @FilePath: \d5c-ui\build\md-loader\util.js
  */
 const { compileTemplate } = require('@vue/component-compiler-utils');
 const compiler = require('vue-template-compiler');

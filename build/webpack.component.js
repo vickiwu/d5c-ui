@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-03-25 11:26:24
  * @LastEditors: vickiWu
  * @Description:以 commonjs2 规范对每个组件单独打包构建，支持按需引入。
- * @FilePath: \element\build\webpack.component.js
+ * @FilePath: \d5c-ui\build\webpack.component.js
  */
 // 执行打包webpack --config build/webpack.component.js,入口文件 components.json,将packages目录下的组件，以commonjs2格式分别输出到lib目录,用于按需引入;
 const path = require('path');

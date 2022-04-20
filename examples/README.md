@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-03-25 16:26:58
  * @LastEditors: vickiWu
  * @Description: 网站
- * @FilePath: \element\examples\README.md
+ * @FilePath: \d5c-ui\examples\README.md
 -->
 
 # 目录结构

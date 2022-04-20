@@ -1,10 +1,10 @@
 /**
  * @Author: vickiWu
  * @Date: 2022-02-18 10:04:00
- * @LastEditTime: 2022-04-02 10:01:07
+ * @LastEditTime: 2022-04-20 11:58:20
  * @LastEditors: vickiWu
  * @Description:打包配置的公用配置。
- * @FilePath: \element\build\config.js
+ * @FilePath: \d5c-ui\build\config.js
  */
 var path = require('path');
 // 排除node_modules中模块

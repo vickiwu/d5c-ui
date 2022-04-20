@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-03-29 13:57:48
  * @LastEditors: vickiWu
  * @Description:
- * @FilePath: \element\build\bin\gen-indices.js
+ * @FilePath: \d5c-ui\build\bin\gen-indices.js
  */
 'use strict';
 // 执行文件node build/bin/gen-indices.js,提供 algoliasearch 搜索功能，需要把 examples/docs 目录下 .md 文件内容格式化后上传 algolia,

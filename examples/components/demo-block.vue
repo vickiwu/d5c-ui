@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 09:56:46
  * @LastEditors: vickiWu
  * @Description: 
- * @FilePath: \element\examples\components\demo-block.vue
+ * @FilePath: \d5c-ui\examples\components\demo-block.vue
 -->
 <template>
   <div

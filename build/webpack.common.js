@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 14:22:38
  * @LastEditors: vickiWu
  * @Description:以 commonjs2 规范打包构建类库。
- * @FilePath: \element\build\webpack.common.js
+ * @FilePath: \d5c-ui\build\webpack.common.js
  */
 // 执行打包webpack --config build/webpack.common.js,入口文件 src/index.js 以commonjs2格式输出到 lib/d5c-ui.common.js;
 const path = require('path');

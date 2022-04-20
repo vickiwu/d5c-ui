@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-03-25 10:32:41
  * @LastEditors: vickiWu
  * @Description:
- * @FilePath: \element\build\bin\template.js
+ * @FilePath: \d5c-ui\build\bin\template.js
  */
 // 同时执行build/bin/template.js文件启动监听examples/pages/template目 录下模板文件，若内容发生变化，会自动执行命令npm run i18n，运行文件build/bin/i18n.js，重新生成网站文件。。
 const path = require('path');

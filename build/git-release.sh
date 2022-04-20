@@ -5,7 +5,7 @@
  # @LastEditTime: 2022-03-25 13:40:12
  # @LastEditors: vickiWu
  # @Description: 检查本地代码 dev 分支是否与线上分支存在冲突。
- # @FilePath: \element\build\git-release.sh
+ # @FilePath: \d5c-ui\build\git-release.sh
 ### 
 # 运行shell脚本sh build/git-release.sh ，检查代码 dev 分支是否存在冲突(No conflicts);
 git checkout dev #切换分支

@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 14:09:10
  * @LastEditors: vickiWu
  * @Description:
- * @FilePath: \element\build\md-loader\containers.js
+ * @FilePath: \d5c-ui\build\md-loader\containers.js
  */
 const mdContainer = require('markdown-it-container');
 

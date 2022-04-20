@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 17:27:51
  * @LastEditors: vickiWu
  * @Description:
- * @FilePath: \element\build\bin\gen-cssfile.js
+ * @FilePath: \d5c-ui\build\bin\gen-cssfile.js
  */
 // 执行 build/bin/gen-cssfile 生成 packages/d5c-style/index.scss 样式总入口文件。全量引入组件时，引用该样式 import 'packages/d5c-style/src/index.scss'
 var fs = require('fs');

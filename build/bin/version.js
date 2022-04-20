@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-03-25 10:36:39
  * @LastEditors: vickiWu
  * @Description:
- * @FilePath: \element\build\bin\version.js
+ * @FilePath: \d5c-ui\build\bin\version.js
  */
 // 生成 examples/version.json 记录项目版本信息，用于网站版头部导航版本切换。
 var fs = require('fs');

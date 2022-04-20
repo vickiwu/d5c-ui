@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-04-02 17:27:54
  * @LastEditors: vickiWu
  * @Description:
- * @FilePath: \element\build\bin\iconInit.js
+ * @FilePath: \d5c-ui\build\bin\iconInit.js
  */
 'use strict';
 // 自动生成examples/icon.json 图标集合文件

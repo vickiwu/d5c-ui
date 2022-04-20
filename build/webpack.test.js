@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-03-25 13:35:11
  * @LastEditors: vickiWu
  * @Description:项目未使用此打包配置，入口src/index.js,打包构建文件dist/app.js
- * @FilePath: \element\build\webpack.test.js
+ * @FilePath: \d5c-ui\build\webpack.test.js
  */
 const path = require('path');
 
