@@ -1,7 +1,7 @@
 {
   "name": "element-d5c-style",
   "version": "2.15.21",
-  "description": "Element component chalk theme.",
+  "description": "基于elementUI的，根据五城业务封装的业务组件，UI库",
   "main": "lib/index.css",
   "style": "lib/index.css",
   "files": [
@@ -13,18 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ElementUI/d5c-style.git"
+    "url": ""
   },
   "keywords": [
     "element",
     "theme"
   ],
-  "author": "yi.shyang@ele.me",
+  "author": "vicki wu",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ElementUI/d5c-style/issues"
-  },
-  "homepage": "https://github.com/ElementUI/d5c-style#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-cssmin": "^0.1.7",

@@ -23,7 +23,7 @@ if [ "$TRAVIS_TAG" ]; then
   # build lib 组件库构建
   npm run dist
   cd temp_web
-  git clone https://$ROT_TOKEN@github.com/ElementUI/lib.git && cd lib
+  git clone https://$ROT_TOKEN@github.com/vickiwu/lib.git && cd lib
   rm -rf `find * ! -name README.md`
   cp -rf ../../lib/** .
   git add -A .
@@ -34,7 +34,7 @@ if [ "$TRAVIS_TAG" ]; then
 
   # build d5c-style 主题构建
   cd temp_web
-  git clone https://$ROT_TOKEN@github.com/ElementUI/d5c-style.git && cd d5c-style
+  git clone https://$ROT_TOKEN@github.com/vickiwu/d5c-style.git && cd d5c-style
   rm -rf *
   cp -rf ../../packages/d5c-style/** .
   git add -A .
@@ -68,7 +68,7 @@ fi
 # build dev site 开发环境 网站构建
 npm run build:file && CI_ENV=/dev/$TRAVIS_BRANCH/ node_modules/.bin/cross-env NODE_ENV=production node_modules/.bin/webpack --config build/webpack.demo.js
 cd temp_web
-git clone https://$ROT_TOKEN@github.com/ElementUI/dev.git && cd dev
+git clone https://$ROT_TOKEN@github.com/vickiwu/dev.git && cd dev
 mkdir $TRAVIS_BRANCH
 rm -rf $TRAVIS_BRANCH/**
 cp -rf ../../examples/d5c-ui/** $TRAVIS_BRANCH/
@@ -79,7 +79,7 @@ cd ../..
 
 # push dev d5c-style 开发环境主题构建
 cd temp_web
-git clone -b $TRAVIS_BRANCH https://$ROT_TOKEN@github.com/ElementUI/d5c-style.git && cd d5c-style
+git clone -b $TRAVIS_BRANCH https://$ROT_TOKEN@github.com/vickiwu/d5c-style.git && cd d5c-style
 rm -rf *
 cp -rf ../../packages/d5c-style/** .
 git add -A .
