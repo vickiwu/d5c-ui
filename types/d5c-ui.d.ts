@@ -3,6 +3,7 @@ import { ElLoading } from './loading'
 import { ElWwy } from './wwy'
 import { ElD5cButton } from './d5c-button'
 import { D5cQuerySelect } from './querySelect'
+import { D5cD5cDialog } from './d5c-dialog'
 
 export interface InstallationOptions {
   locale: any,
@@ -31,3 +32,6 @@ export class D5cButton extends ElD5cButton {}
 
 /** QuerySelect Component */
 export class QuerySelect extends D5cQuerySelect {}
+
+/** D5cDialog Component */
+export class D5cDialog extends D5cD5cDialog {}

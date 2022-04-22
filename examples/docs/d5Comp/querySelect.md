@@ -1,7 +1,7 @@
 <!--
  * @Author: vickiWu
  * @Date: 2022-04-07 16:15:33
- * @LastEditTime: 2022-04-07 17:42:33
+ * @LastEditTime: 2022-04-21 16:23:14
  * @LastEditors: vickiWu
  * @Description: 
  * @FilePath: \d5c-ui\examples\docs\d5Comp\querySelect.md
@@ -17,6 +17,8 @@
 <template>
   <d5c-query-select  v-model="carId" placeholder="请选择车辆" value-key="id" value-label="carNum" :default-label="carNo" clearable :search-fields="car" :remote="carRemote" @change="onCarChange">
     <template>
+      <el-table-column label="司机" prop="name"></el-table-column>
+      <el-table-column label="押运员" prop="name2"></el-table-column>
       <el-table-column label="车牌号" prop="carNum"></el-table-column>
       <el-table-column label="准牵引总质量/核载质量" prop="tractionWeight"></el-table-column>
     </template>
@@ -29,8 +31,8 @@
     data(){
       return{
         carId:0,
-        carNo:"车牌号",
-        car: [{ field: "carNum", label: "车牌号" }],
+        carNo:"",
+        car: [{ field: "carNum", label: "车牌号" },{ field: "name", label: "司机" }],
       }
     },
     methods: {
@@ -45,8 +47,11 @@
         return new Promise((resolve,reject)=>{
           if(query){
             resolve({
-              data:[],
-              total:0
+              data:[{name:"张三",name2:"张三2",carNum:"苏A12345",tractionWeight:100},
+              {name:"李四",name2:"李四2",carNum:"苏A12345",tractionWeight:100},
+              {name:"王五",name2:"王五2",carNum:"苏A12345",tractionWeight:100},
+              {name:"赵六",name2:"赵六2",carNum:"苏A12345",tractionWeight:100}],
+              total:4
             })
           }else{
             reject(new Error("没有参数"))

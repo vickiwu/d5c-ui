@@ -279,6 +279,10 @@
             {
               "path": "/querySelect",
               "title": "QuerySelect 下拉表格查询"
+            },
+            {
+              "path": "/d5c-dialog",
+              "title": "D5cDialog 抽屉测试"
             }
           ]
         }

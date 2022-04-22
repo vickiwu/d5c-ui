@@ -2,5 +2,6 @@
   "loading": "./packages/loading/index.js",
   "wwy": "./packages/wwy/index.js",
   "d5c-button": "./packages/d5c-button/index.js",
-  "querySelect": "./packages/querySelect/index.js"
+  "querySelect": "./packages/querySelect/index.js",
+  "d5c-dialog": "./packages/d5c-dialog/index.js"
 }

@@ -3,16 +3,16 @@ import Loading from '../packages/loading/index.js';
 import Wwy from '../packages/wwy/index.js';
 import D5cButton from '../packages/d5c-button/index.js';
 import QuerySelect from '../packages/querySelect/index.js';
+import D5cDialog from '../packages/d5c-dialog/index.js';
 import locale from 'element-ui/src/locale';
 const components = [
   Loading,
   Wwy,
   D5cButton,
-  QuerySelect
+  QuerySelect,
+  D5cDialog
 ];
 const install = function(Vue, opts = {}) {
-  locale.use(opts.locale);
-  locale.i18n(opts.i18n);
   components.forEach(component => {
     Vue.component(component.name, component);
   });
@@ -26,5 +26,6 @@ export default {
   Loading,
   Wwy,
   D5cButton,
-  QuerySelect
+  QuerySelect,
+  D5cDialog
 };
